@@ -45,7 +45,7 @@ code {
   min-width: 100%;
   max-width: 100%;
   background-color: white;
-  padding: 10px 50px;
+  padding: 0 50px;
   overflow-y: scroll;
   position: relative;
 }
@@ -81,6 +81,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .movie-card-container {
@@ -140,7 +141,7 @@ code {
   position: relative;
 }
 
-.movie-card .img{
+.movie-card .img {
   min-height: 200px;
   height: 200px;
   max-height: 200px;
@@ -150,23 +151,26 @@ code {
   background-color: aquamarine;
 }
 
-.movie-card .title{
-  min-height: 50px;
-  height: 50px;
-  max-height: 50px;
-  min-width: 100%;
-  width: 100%;
-  max-width: 100%;
+.movie-card .title {
+  min-height: 100px;
+  height: 100px;
+  max-height: 100px;
+  padding: 0 10px;
   font-size: large;
   font-weight: 700;
   color: white;
-  background-color: antiquewhite;
 }
 
-.movie-card .favourite{
+.movie-card .favourite {
   position: absolute;
   top: 10px;
   right: 10px;
 }
 
-
+.movie-card .description {
+  min-height: 50px;
+  padding: 0 10px;
+  font-size: large;
+  font-weight: 600;
+  color: white;
+}

@@ -4,10 +4,11 @@ import SearchMovies from "./searchMovies";
 
 function MovieContainer() {
   return (
-  <div className="movie-container">
-    <SearchMovies />
-    <MovieCards />
-  </div>
-  )};
+    <div className="movie-container">
+      <SearchMovies />
+      <MovieCards />
+    </div>
+  );
+}
 
 export default MovieContainer;

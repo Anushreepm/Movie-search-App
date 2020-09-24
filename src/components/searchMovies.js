@@ -18,10 +18,14 @@ function SearchMovies() {
   };
 
   const getData = async () => {
-    console.log("i am inside");
-    putData(data);
-    const response = await axios.get(`${url}${searchtext}`);
-    putData(response);
+    console.log(`${url}${searchtext}`);
+    try {
+      const response = await axios.get(`${url}${searchtext}`);
+
+      putData(response.data, dropdownvalue);
+    } catch (err) {
+      return err;
+    }
   };
 
   return (
@@ -39,7 +43,7 @@ function SearchMovies() {
           onChange={(e) => setDropdown(e.target.value)}
         >
           <option value="all">All</option>
-          <option value="movies">Movies</option>
+          <option value="movie">Movies</option>
           <option value="series">Series</option>
           <option value="episodes">Episodes</option>
         </select>
